@@ -1,0 +1,15 @@
+﻿am-view, am-repeat, am-reference, am-text {
+	display: block;
+}
+
+am-text {
+	display: inline;
+}
+
+am-template {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}

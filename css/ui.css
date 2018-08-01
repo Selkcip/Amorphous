@@ -1,0 +1,220 @@
+﻿html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-weight: bold;
+	user-select: none;
+	background: #BFC8AD;
+	color: #545775;
+	height: 100%;
+	margin: 0;
+	cursor: default;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.icon {
+	display: inline-block;
+	font-size: 20px;
+	height: 1em;
+	line-height: 1em;
+	vertical-align: middle;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.icon:hover {
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.icon:active {
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.icon-home::before {
+	content: "\e900";
+}
+
+.icon-home[active]::before {
+	color: #BFC8AD;
+}
+
+.icon-star::before {
+	content: "\e9d7";
+}
+
+.icon-star[active]::before {
+	color: rgb(255, 255, 200);
+	content: "\e9d9";
+}
+
+.icon-lock::before {
+	content: "\e990";
+}
+
+.icon-lock[active]::before {
+	content: "\e98f";
+}
+
+button {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-weight: bold;
+	display: inline-block;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px, rgba(255, 255, 255, 0.5) 0px 0px 5px inset;
+	outline: 0;
+}
+
+button:hover {
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px, rgba(255, 255, 255, 1) 0px 0px 10px inset;
+}
+
+button:active {
+	box-shadow: rgba(0, 0, 0, 1) 0px 0px 10px inset;
+}
+
+button.create {
+	background: #BFC8AD;
+}
+
+button.delete {
+	background: rgb(255, 128, 128);
+}
+
+button.cancel {
+	background: #aaaaaa;
+}
+
+.buttons {
+	flex: 1 0 0;
+}
+
+.buttons::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.buttons am-button {
+	float: right;
+	margin-left: 5px;
+}
+
+input[type=text], textarea {
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	box-sizing: border-box;
+	background: #DBCFB0;
+	color: #545775;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	box-shadow: rgba(0, 0, 0, 1) 0px 0px 5px inset;
+}
+
+.email {
+	user-select: all;
+}
+
+.overlay {
+	position: fixed;
+	display: initial;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 1.0;
+	transition: opacity 0.25s linear;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.overlay.hidden {
+	pointer-events: none;
+	opacity: 0.0;
+}
+
+.confirmation {
+	width: 300px;
+	margin: 100px auto;
+	background: #90B494;
+}
+
+.panel {
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.panel .panel-header {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	background: #DBCFB0;
+}
+
+.panel::after {
+	box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px inset;
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 5px;
+	pointer-events: none;
+}
+
+.panel .panel-title {
+	display: inline-block;
+	flex: 1 0 0;
+}
+
+.panel .panel-body {
+	padding: 5px;
+}
+
+.page {
+	margin: auto;
+	max-width: 800px;
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.page .page-header {
+	flex: 0 0 35px;
+}
+
+.page .page-title {
+	font-size: 20px;
+}
+
+.page .page-body {
+	padding: 5px;
+	background: #718F94;
+	flex: 1 1 0;
+	overflow-y: auto;
+}
+
+.page form {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 0;
+}
+
+.expandable {
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height ease-in-out 0.25s;
+}
+
+.expanded>.expandable {
+	max-height: 1000px;
+}

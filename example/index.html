@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Amorphous App</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../css/icons.css" />
+	<link rel="stylesheet" href="../css/Amorphous.css" />
+	<link rel="stylesheet" href="../css/ui.css" />
+
+	<script type="text/javascript" src="../src/Amorphous.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+
+	<!-- Initialize the app by pointing an app-view at a constructor -->
+	<am-app data-app="MyApp">
+		<div>Here's a list of things</div>
+		<am-repeat data-name="listOfStuff">
+			<!-- The contents of this element will be treated as a template -->
+			<am-button data-path="" data-name="name" data-click="removeItem" class="icon icon-bin" title="Delete"></am-button>
+			<span><am-text data-name="name">This text will be replaced with the value of name for each entry in the list.</am-text></span>
+		</am-repeat>
+		
+		<am-context data-path="newItem">
+			<!-- Form to encapsulate the input data -->
+			<form onsubmit="return false;">
+				<am-input data-name="name">
+					<div>
+						<input type="text" name="name" placeholder="Item Name" />
+					</div>
+				</am-input>
+				<am-button data-path="" data-click="addItem"><button class="create">Add</button></am-button>
+			</form>
+		</am-context>
+
+	</am-app>
+		
+</body>
+</html>
