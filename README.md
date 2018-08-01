@@ -31,6 +31,8 @@ Second
 Third
 ```
 
+Live example: http://jar42.com/amorphous/example/
+
 There isn't really data manipulation support built in so you have to define functions in your app for that and then call them from button elements. The app view watches the top level properties of the app and updates itself and its children when one changes.
 
 Of course being dependent on custom elements means that in any other browser it'll just be a static page with the initial values. This could potentially be fixed with a shim to add custom element support.
